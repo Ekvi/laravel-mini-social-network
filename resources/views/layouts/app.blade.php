@@ -13,6 +13,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -59,6 +61,20 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="/home">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="/profile/{{Auth::user()->username}}">My profile</a>
+                                    </li>
+                                    <hr>
+                                    <li>
+                                        <a href="/articles/create">Create Article</a>
+                                    </li>
+                                    <li>
+                                        <a href="/articles">Feed</a>
+                                    </li>
+                                    <hr>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
